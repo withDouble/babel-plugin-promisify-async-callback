@@ -119,6 +119,13 @@ catch (error) {
 }
 ```
 
+## Gotchas :warning:
+
+While you can _use_ the function any way you want, you still have to _write_ it as a callback-based function:
+- Don’t `throw` any error, pass them through the callback `cb(error)`
+- Don’t `return` the result, pass it through the callback `cb(null, result)`
+- Don’t `await`
+
 ## What does it actually do?
 
 It wraps the function body in `return new Promise((resolve, reject) => { ... })` 😄
