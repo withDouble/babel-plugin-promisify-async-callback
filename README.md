@@ -131,20 +131,18 @@ While you can _use_ the function any way you want, you still have to _write_ it 
 It wraps the function body in `return new Promise((resolve, reject) => { ... })` 😄
 and still calls `cb` if one has been passed.
 
-### Writing
-
 ```js
-async function translateToEnglish (word, cb) {
-  translator.get(word, 'english', cb)
+async function fetchUser (userId, cb) {
+  api.getUser(userId, cb)
 }
 ```
 
-### Transpiles to
+transpiles to
 
 ```js
-async function translateToEnglish (word, cb) {
+async function fetchUser (userId, cb) {
   const fn = cb => {
-    translator.get(word, 'english', cb)
+    api.getUser(userId, cb)
   }
 
   return new Promise((resolve, reject) => {
