@@ -1,4 +1,4 @@
-# babel-plugin-promisify-async-callback
+# @withdouble/babel-plugin-promisify-async-callback
 
 Babel plugin to promisify callback-based functions with async notation at transpilation.
 
@@ -7,7 +7,7 @@ Babel plugin to promisify callback-based functions with async notation at transp
 Install as development dependency:
 
 ```
-yarn add --dev git://github.com/withDouble/babel-plugin-promisify-async-callback.git
+yarn add --dev @withdouble/babel-plugin-promisify-async-callback
 ```
 
 Add this to your .babelrc file:
@@ -16,7 +16,7 @@ Add this to your .babelrc file:
 {
   ...
   "plugins": [
-    "promisify-async-callback"
+    "@withdouble/babel-plugin-promisify-async-callback"
     ...
   ]
 }

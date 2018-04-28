@@ -1,6 +1,6 @@
 {
-  "name": "babel-plugin-promisify-async-callback",
-  "version": "0.1.0",
+  "name": "@withdouble/babel-plugin-promisify-async-callback",
+  "version": "0.2.0",
   "description": "Babel plugin to promisify callback-based functions with async notation at transpilation.",
   "keywords": [
     "babel",
@@ -16,10 +16,13 @@
     "lint": "node_modules/.bin/eslint src"
   },
   "devDependencies": {
-    "@double/eslint-config": "git://github.com/withDouble/eslint-config.git",
     "eslint": "^4.19.1"
   },
   "dependencies": {
+    "@withdouble/eslint-config": "^1.2.1",
     "babel-template": "^6.26.0"
+  },
+  "eslintConfig": {
+    "extends": "@withdouble"
   }
 }
